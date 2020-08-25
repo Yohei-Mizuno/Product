@@ -3,10 +3,14 @@ class Product:
         self.name = name
         self.price = price
 
+    def discount(self, discount_amount):
+        self.price -= discount_amount
 
 if __name__ == '__main__':
     p1 = Product('アタリメ', 98)
     print(p1.name)
+    print(p1.price)
+    p1.discount(10)
     print(p1.price)
 
     p2 = Product('豆乳', 120)

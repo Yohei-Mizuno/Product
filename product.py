@@ -3,16 +3,17 @@ class Product:
         self.name = name
         self.price = price
 
+    def price_list(self):
+        print(f'商品名:{self.name},価格:¥{self.price}')
+
     def discount(self, discount_amount):
         self.price -= discount_amount
 
 if __name__ == '__main__':
     p1 = Product('アタリメ', 98)
-    print(p1.name)
-    print(p1.price)
+    p1.price_list()
     p1.discount(10)
-    print(p1.price)
+    p1.price_list()
 
     p2 = Product('豆乳', 120)
-    print(p2.name)
-    print(p2.price)
+    p2.price_list()
